@@ -5,7 +5,9 @@
   "main": "src/app/index.js",
   "scripts": {
     "dev": "nodemon server.js",
-    "start": "node server.js"
+    "start": "node server.js",
+    "postinstall": "npm run build",
+    "webpack": "webpack --mode production"
   },
   "keywords": [],
   "author": "",
