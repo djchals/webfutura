@@ -5,7 +5,7 @@
   "main": "src/app/index.js",
   "scripts": {
     "dev": "nodemon server.js",
-    "start": "cross-env NODE_ENV=production node server.js",
+    "start": "node server.js",
     "postinstall": "npm run build",
     "build": "cross-env NODE_ENV=production webpack",
     "webpack": "webpack --mode development --watch"
