@@ -1280,3 +1280,6 @@ padding-bottom: 2em;
 			top: 7px;
 		}
 		}
+/* anadidos por carlos */
+#cookie_bar_cl {display:none;position:fixed;left:0;right:0;bottom:0;padding:10px;width:100%;text-align:center;min-height:40px;background-color: #182129;opacity:0.9;color:#fff;font-family:verdana;font-size:0.8em;line-height:1.6em;border-top:1px solid #0f0f0f;z-index:99999;}
+#cookie_bar_cl .ok {padding:4px;color:#ef664d;font-size:14px;text-decoration:none;text-transform:uppercase}
