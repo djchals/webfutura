@@ -52,7 +52,7 @@ export default {
 		phone: "Teléfono",
 		message: "Tu mensaje",
 		sendMessage: "[Enviar mensaje]",
-		footerPhrase: "&copy; 2021 WebFutura.online | Todos los derechos reservados",
+		footerPhrase: "&copy; 2021 WebFutura.online | Web desarrollada con<a href=\"https://vuejs.org/\" target=\"_blank\">Vue.js</a>",
 		contactForm: new Contact(),
 		formError: 'ok',
 		arrayErrors:{

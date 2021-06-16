@@ -10,6 +10,19 @@
   <link href="css/bootstrap.css" rel='stylesheet' type='text/css'/>
   <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
   <link rel="icon" href="img/favicon.ico" type="image/png" />
+  
+  
+<!-- cookie bar styles #040b33     2e3e4e;
+}-->
+<style>
+#cookie_bar_cl {display:none;position:fixed;left:0;right:0;bottom:0;padding:10px;width:100%;text-align:center;min-height:40px;background-color: #182129;opacity:0.9;color:#fff;font-family:verdana;font-size:0.8em;line-height:1.6em;border-top:1px solid #0f0f0f;z-index:99999;}
+#cookie_bar_cl .ok {padding:4px;color:#ef664d;font-size:14px;text-decoration:none;text-transform:uppercase}
+/* #cookie_bar_cl .info {padding-left:5px;text-decoration:none;color:#fff;} */
+</style>
+
+  
+  
+  
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-JWZ9DYXTM0"></script>
 <script>
@@ -24,5 +37,48 @@
 	<div id="app"></div>
 	<footer id="footer"></footer>
 	<script src="js/bundle.js"></script>
+
+	<div id="cookie_bar_cl">
+	<p>Usamos cookies para asegurar que te damos la mejor experiencia en nuestra web. Si continúas usando este sitio, asumiremos que estás de acuerdo con ello.</p>
+	<p><a href="javascript:void(0);" class="ok" onclick="PonerCookieCL();">[Aceptar]</a></p>
+	</div>
+
+	<script>
+	function getCookieCL( c_name ) {
+		var c_value = document.cookie;
+		var c_start = c_value.indexOf( " " + c_name + "=" );
+		if ( c_start == -1 ) {
+			c_start = c_value.indexOf( c_name + "=" );
+		}
+		if ( c_start == -1 ) {
+			c_value = null;
+		} else {
+			c_start = c_value.indexOf( "=", c_start ) + 1;
+			var c_end = c_value.indexOf( ";", c_start );
+			if ( c_end == -1 ) {
+				c_end = c_value.length;
+			}
+			c_value = unescape( c_value.substring( c_start, c_end ) );
+		}
+		return c_value;
+	}
+	function setCookieCL( c_name, value, exdays ) {
+		var exdate = new Date();
+		exdate.setDate( exdate.getDate() + exdays );
+		var c_value = escape( value ) + ( ( exdays == null ) ? "" : "; expires = " + exdate.toUTCString() );
+		document.cookie = c_name + "=" + c_value;
+	}
+	function PonerCookieCL() {
+		setCookieCL( "cl_politica_cookies_ok", "1", 365 );
+		document.getElementById( "cookie_bar_cl" ).style.display = "none";
+	}
+	if( getCookieCL( "cl_politica_cookies_ok" ) != "1" ) {
+		document.getElementById( "cookie_bar_cl" ).style.display = "block";
+		window.setTimeout( PonerCookieCL, 30000 );
+	} else {
+		document.getElementById( "cookie_bar_cl" ).style.display = "none";
+	}
+	</script>
+
 </body>
 </html>
