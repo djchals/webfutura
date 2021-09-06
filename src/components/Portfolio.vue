@@ -38,6 +38,7 @@
         {name: "FitnessCasero.com", urlImg: "./img/fitnesscasero.jpg", urlProject: "https://www.fitnesscasero.com/"},
         {name: "CuradermBCC.eu", urlImg: "./img/cremasantiarrugas.jpg", urlProject: "https://www.cremasantiarrugas.online/"},
         {name: "Cremasantiarrugas.online", urlImg: "./img/curaderm.jpg", urlProject: "https://www.curadermbcc.eu/"},
+        {name: "AutoExaming.com", urlImg: "./img/autoexaming.jpg", urlProject: "https://autoexaming.com"},
       ]
     })
   }

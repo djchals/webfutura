@@ -7,7 +7,6 @@ require('dotenv').config();//para obtener las variables de entorno
 const app=express();//lo inicializamos
 
 ///////////////////////////////////////////////////// CONFIGURACIÓN ///////////////////////////////////////////////////// 
-// const uri="mongodb+srv://"+process.env.USERDB+":"+process.env.PASSDB+"@cluster0.mnpm2.mongodb.net/"+process.env.NOMBREDB+"?retryWrites=true&w=majority";
 // 
 // mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true})
 // .then(()=>console.log("Base de datos conectada"))
