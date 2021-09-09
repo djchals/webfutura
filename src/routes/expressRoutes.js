@@ -20,6 +20,11 @@ router.get("/",async(req,res)=>{
 	res.sendFile(routeIndex);//servimos el putísimo index
 });
 
+router.get("/urls_cv.txt",async(req,res)=>{
+	res.sendFile(arrTmpDir.join('/')+'/public/urls_cv.txt');//servimos el putísimo index
+});
+
+
 router.post("/enviar-contacto",  async(req,res)=>{
 	const sendContact=require('../models/sendContact.js');
 	const email=new sendContact(req.body.name,req.body.email,req.body.phone,req.body.message);
